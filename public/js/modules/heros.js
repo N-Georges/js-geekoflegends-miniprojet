@@ -10,9 +10,11 @@ class Guerrier extends Personnnages {
         this.vie = vie
         this.attaque = attaque
         this.rage = rage
-        this.attack = () => {
+        this.attack = (a) => {
             this.attaque = attaque * 1.4
-            this.vie = vie - (vie * 0.75)
+            this.vie = a.vie - (a.vie * 0.75)
+            a.vie = a.vie - this.attaque
+            console.log(`${this.nom} lance une attaque de ${this.attaque} contre ${a.nom}`);
         }
         this.defense = () => {
             this.attaque = attaque - (attaque * 0.5)
@@ -22,7 +24,7 @@ class Guerrier extends Personnnages {
 
 }
 
-let ragnar = new Guerrier("ragnar", 100, 25, 0)
+let ragnar = new Guerrier("Ragnar", 100, 25, 0)
 
 
 
@@ -37,9 +39,11 @@ class Mage extends Personnnages {
         this.vie = vie
         this.attaque = attaque
         this.mana = mana //TODO chiffre qui sera aléatoirement imposé entre les suivants 7, 9 ou 11.Math.floor((Math.random)*nbrMana)
-        this.attack = () => {
+        this.attack = (a) => {
             this.attaque = attaque * 1.4
-            this.vie = vie - (vie * 0.75)
+            this.vie = a.vie - (a.vie * 0.75)
+            a.vie = a.vie - this.attaque
+            console.log(`${this.nom} lance une attaque de ${this.attaque} contre ${a.nom}`);
         }
         this.defense = () => {
             this.attaque = attaque - (attaque * 0.5)
@@ -64,9 +68,11 @@ class Archer extends Personnnages {
         this.vie = vie
         this.attaque = attaque
         this.fleches = fleches //TODO chiffre qui sera aléatoirement imposé entre 7, 8 , 9 ,10 ,11. Math.floor((Math.random)*nbrFleches)
-        this.attack = () => {
+        this.attack = (a) => {
             this.attaque = attaque * 1.4
-            this.vie = vie - (vie * 0.75)
+            this.vie = a.vie - (a.vie * 0.75)
+            a.vie = a.vie - this.attaque
+            console.log(`${this.nom} lance une attaque de ${this.attaque} contre ${a.nom}`);
         }
         this.defense = () => {
             this.attaque = attaque - (attaque * 0.5)
@@ -76,7 +82,7 @@ class Archer extends Personnnages {
 
 }
 
-let arrow = new Archer("arrow", 100, 15, 10)
+let arrow = new Archer("Arrow", 100, 15, 10)
 
 
 
