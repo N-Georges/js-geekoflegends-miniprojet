@@ -16,6 +16,9 @@ let sauron = new Boss("Sauron", 140, 45)
 let chronos = new Boss("Chronos", 110, 40)
 let lilith = new Boss("Lilith", 160, 39)
 
+// exemple Lodash 'choisir alleatoirement dans un tableau'
+// let bossTab = [sauron, chronos, lilith]
+// console.log(_.sample(bossTab));
 
 
 
@@ -46,7 +49,7 @@ console.log("#\n#");
 arrow.attack(sauron)
 console.log(`Vie de ${sauron.nom}: ${sauron.vie}`);
 arrow.fleches = arrow.fleches -2
-console.log(`${arrow.nom} consomme 2 fleches par attaque.\nVoici le reste de fleches: ${arrow.fleches}`);
+console.log(`${arrow.nom} consomme 2 fleches par attaque.\nVoici le reste des fleches: ${arrow.fleches}`);
 
 // lancement de l'enigme
 if (Boss.vie <= 20) {
@@ -66,7 +69,7 @@ console.log(`Vie de ${chronos.nom}: ${chronos.vie}`);
 arrow.attack(chronos)
 console.log(`Vie de ${chronos.nom}: ${chronos.vie}`);
 arrow.fleches = arrow.fleches -2
-console.log(`${arrow.nom} consomme 2 fleches par attaque.\nVoici le reste de fleches: ${arrow.fleches}`);
+console.log(`${arrow.nom} consomme 2 fleches par attaque.\nVoici le reste des fleches: ${arrow.fleches}`);
 console.log("#\n#");
 
 // attaque de merlin face a chronos
@@ -116,7 +119,7 @@ console.log(`Vie de ${lilith.nom}: ${lilith.vie}`);
 arrow.attack(lilith)
 console.log(`Vie de ${lilith.nom}: ${lilith.vie}`);
 arrow.fleches = arrow.fleches -2
-console.log(`${arrow.nom} consomme 2 fleches par attaque.\nVoici le reste de fleches: ${arrow.fleches}`);
+console.log(`${arrow.nom} consomme 2 fleches par attaque.\nVoici le reste des fleches: ${arrow.fleches}`);
 console.log("#\n#");
 
 // lancement de l'enigme

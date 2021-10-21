@@ -12,8 +12,9 @@ class Guerrier extends Personnnages {
         this.rage = rage
         this.attack = (a) => {
             this.attaque = attaque * 1.4
-            this.vie = a.vie - (a.vie * 0.75)
+            this.vie = vie - (vie * 0.75)
             a.vie = a.vie - this.attaque
+            
             console.log(`${this.nom} lance une attaque de ${this.attaque} contre ${a.nom}`);
         }
         this.defense = () => {
@@ -41,7 +42,7 @@ class Mage extends Personnnages {
         this.mana = mana //TODO chiffre qui sera aléatoirement imposé entre les suivants 7, 9 ou 11.Math.floor((Math.random)*nbrMana)
         this.attack = (a) => {
             this.attaque = attaque * 1.4
-            this.vie = a.vie - (a.vie * 0.75)
+            this.vie = vie - (vie * 0.75)
             a.vie = a.vie - this.attaque
             console.log(`${this.nom} lance une attaque de ${this.attaque} contre ${a.nom}`);
         }
@@ -70,7 +71,7 @@ class Archer extends Personnnages {
         this.fleches = fleches //TODO chiffre qui sera aléatoirement imposé entre 7, 8 , 9 ,10 ,11. Math.floor((Math.random)*nbrFleches)
         this.attack = (a) => {
             this.attaque = attaque * 1.4
-            this.vie = a.vie - (a.vie * 0.75)
+            this.vie = vie - (vie * 0.75)
             a.vie = a.vie - this.attaque
             console.log(`${this.nom} lance une attaque de ${this.attaque} contre ${a.nom}`);
         }
