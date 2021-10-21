@@ -1,4 +1,3 @@
-import Personnnages from "./modules/personnages.js";
 import {Guerrier, Mage, Archer} from "./modules/heros.js";
 import Boss from "./modules/boss.js"
 
@@ -21,74 +20,72 @@ let lilith = new Boss("Lilith", 160, 39)
 
 
 // script GeekOfLegend
+console.log('______________________________________Premier Tour______________________________');
+console.log(`Entre dans l'arene: le Boss ${sauron.nom}\nAinsi que les 3 Heros suivant: ${ragnar.nom} le Guerrier, ${merlin.nom} le Mage, ${arrow.nom} l'Archer`);
+console.log("#");
 
+// attaque de ragnar face a sauron
+console.log(`Vie de ${sauron.nom}: ${sauron.vie}`);
+ragnar.attack(sauron)
+console.log(`Vie de ${sauron.nom}: ${sauron.vie}`);
+ragnar.rage = ragnar.rage +1
+console.log(`${ragnar.nom} gagne 1 point de rage.\nVoici ses point de rage: ${ragnar.rage}`);
+console.log("#\n#");
 
-// console.log('______________________________________Premier Tour______________________________');
-// console.log(`Entre dans l'arene: le Boss ${sauron.nom}\nAinsi que les 3 Heros suivant: ${ragnar.nom} le Guerrier, ${merlin.nom} le Mage, ${arrow.nom} l'Archer`);
-// console.log("#");
+// attaque du sauron contre merlin
+sauron.attack(merlin)
 
-// // attaque de ragnar face a sauron
-// console.log(`Vie de ${sauron.nom}: ${sauron.vie}`);
-// ragnar.attack(sauron)
-// console.log(`Vie de ${sauron.nom}: ${sauron.vie}`);
-// ragnar.rage = ragnar.rage +1
-// console.log(`${ragnar.nom} gagne 1 point de rage.\nVoici ses point de rage: ${ragnar.rage}`);
-// console.log("#\n#");
+// attaque de merlin face a sauron
+merlin.attack(sauron)
+console.log(`Vie de ${sauron.nom}: ${sauron.vie}`);
+merlin.mana = merlin.mana -2
+console.log(`${merlin.nom} perd 2 point de mana.\nVoici ses point de mana: ${merlin.mana}`);
+console.log("#\n#");
 
-// // attaque du sauron contre merlin
-// sauron.attack(merlin)
+// attaque de arrow face a sauron
+arrow.attack(sauron)
+console.log(`Vie de ${sauron.nom}: ${sauron.vie}`);
+arrow.fleches = arrow.fleches -2
+console.log(`${arrow.nom} consomme 2 fleches par attaque.\nVoici le reste de fleches: ${arrow.fleches}`);
 
-// // attaque de merlin face a sauron
-// merlin.attack(sauron)
-// console.log(`Vie de ${sauron.nom}: ${sauron.vie}`);
-// merlin.mana = merlin.mana -2
-// console.log(`${merlin.nom} perd 2 point de mana.\nVoici ses point de mana: ${merlin.mana}`);
-// console.log("#\n#");
-
-// // attaque de arrow face a sauron
-// arrow.attack(sauron)
-// console.log(`Vie de ${sauron.nom}: ${sauron.vie}`);
-// arrow.fleches = arrow.fleches -2
-// console.log(`${arrow.nom} consomme 2 fleches par attaque.\nVoici le reste de fleches: ${arrow.fleches}`);
-
-// // lancement de l'enigme
-// if (Boss.vie <= 20) {
-//     sauron.enigme()
-// }else{
-//     console.log(`${sauron.nom} vous a vaincu`);
-// }
+// lancement de l'enigme
+if (Boss.vie <= 20) {
+    sauron.enigme()
+}else{
+    console.log(`${sauron.nom} vous a vaincu`);
+}
 
 
 
-// console.log('______________________________________Deuxieme Tour______________________________');
-// console.log(`Entre dans l'arene: le Boss ${chronos.nom}\nAinsi que les 3 Heros suivant: ${ragnar.nom} le Guerrier, ${merlin.nom} le Mage, ${arrow.nom} l'Archer`);
-// console.log("#");
+console.log('______________________________________Deuxieme Tour______________________________');
+console.log(`Entre dans l'arene: le Boss ${chronos.nom}\nAinsi que les 3 Heros suivant: ${ragnar.nom} le Guerrier, ${merlin.nom} le Mage, ${arrow.nom} l'Archer`);
+console.log("#");
 
-// // attaque de arrow face a chronos
-// console.log(`Vie de ${chronos.nom}: ${chronos.vie}`);
-// arrow.attack(chronos)
-// console.log(`Vie de ${chronos.nom}: ${chronos.vie}`);
-// arrow.fleches = arrow.fleches -2
-// console.log(`${arrow.nom} consomme 2 fleches par attaque.\nVoici le reste de fleches: ${arrow.fleches}`);
-// console.log("#\n#");
+// attaque de arrow face a chronos
+console.log(`Vie de ${chronos.nom}: ${chronos.vie}`);
+arrow.attack(chronos)
+console.log(`Vie de ${chronos.nom}: ${chronos.vie}`);
+arrow.fleches = arrow.fleches -2
+console.log(`${arrow.nom} consomme 2 fleches par attaque.\nVoici le reste de fleches: ${arrow.fleches}`);
+console.log("#\n#");
 
-// // attaque de merlin face a chronos
-// merlin.attack(chronos)
-// console.log(`Vie de ${chronos.nom}: ${chronos.vie}`);
-// merlin.mana = merlin.mana -2
-// console.log(`${merlin.nom} perd 2 point de mana.\nVoici ses point de mana: ${merlin.mana}`);
-// console.log("#\n#");
+// attaque de merlin face a chronos
+merlin.attack(chronos)
+console.log(`Vie de ${chronos.nom}: ${chronos.vie}`);
+merlin.mana = merlin.mana -2
+console.log(`${merlin.nom} perd 2 point de mana.\nVoici ses point de mana: ${merlin.mana}`);
+console.log("#\n#");
 
-// // attaque du sauron contre merlin
-// chronos.attack(arrow)
+// attaque du sauron contre merlin
+chronos.attack(arrow)
 
-// // attaque de ragnar face a chronos
-// ragnar.attack(chronos)
-// console.log(`Vie de ${chronos.nom}: ${chronos.vie}`);
-// ragnar.rage = ragnar.rage +1
-// console.log(`${ragnar.nom} gagne 1 point de rage.\nVoici ses point de rage: ${ragnar.rage}`);
+// attaque de ragnar face a chronos
+ragnar.attack(chronos)
+console.log(`Vie de ${chronos.nom}: ${chronos.vie}`);
+ragnar.rage = ragnar.rage +1
+console.log(`${ragnar.nom} gagne 1 point de rage.\nVoici ses point de rage: ${ragnar.rage}`);
 
-// // lancement de l'enigme
+// lancement de l'enigme
 // if (chronos.vie <= 20) {
 //     chronos.enigme()
 // }else{
